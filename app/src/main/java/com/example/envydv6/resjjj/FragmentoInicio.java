@@ -8,8 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.envydv6.resjjj.R;
-
 /**
  * Fragmento para la sección de "Inicio"
  */
@@ -27,11 +25,36 @@ public class FragmentoInicio extends Fragment {
         View view = inflater.inflate(R.layout.fragmento_inicio, container, false);
 
         reciclador = (RecyclerView) view.findViewById(R.id.reciclador);
+        reciclador.setHasFixedSize(true);
+        // Usar un administrador para LinearLayout
         layoutManager = new LinearLayoutManager(getActivity());
         reciclador.setLayoutManager(layoutManager);
 
+
         adaptador = new AdaptadorInicio();
         reciclador.setAdapter(adaptador);
+
+        /*fab.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        // Iniciar actividad de inserción
+                        getActivity().startActivityForResult(
+                                new Intent(getActivity(), InsertActivity.class), 3);
+                    }
+                }
+        );*/
+        /*reciclador.setOnClickListener(
+                new View.OnClickListener(){
+                    @Override
+                    public void onClick (View view){
+                        //iniciar actividad detalle
+                        getActivity().startActivityForResult(
+                                new Intent(getActivity(),FragmentoDetalle.class),3);
+                    }
+                }
+        );*/
+
         return view;
     }
 

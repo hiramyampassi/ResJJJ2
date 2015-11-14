@@ -8,6 +8,7 @@
     <ImageView
         android:id="@+id/miniatura_comida"
         android:layout_width="match_parent"
+        android:onClick="salir"
         android:layout_height="192dp" />
 
     <LinearLayout

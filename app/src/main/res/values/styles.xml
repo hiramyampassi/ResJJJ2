@@ -13,4 +13,14 @@
 
     <style name="Theme.ConNavigationDrawer" parent="Base.AppTheme"/>
 
+    <style name="CursosPoint" parent="CursosPoint.Base"/>
+    <style name="CursosPoint.Base" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="android:windowBackground">@color/window_background</item>
+
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorAccent">@color/accentColor</item>
+    </style>
+
 </resources>
