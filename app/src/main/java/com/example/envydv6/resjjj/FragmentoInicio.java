@@ -33,28 +33,6 @@ public class FragmentoInicio extends Fragment {
 
         adaptador = new AdaptadorInicio();
         reciclador.setAdapter(adaptador);
-
-        /*fab.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        // Iniciar actividad de inserción
-                        getActivity().startActivityForResult(
-                                new Intent(getActivity(), InsertActivity.class), 3);
-                    }
-                }
-        );*/
-        /*reciclador.setOnClickListener(
-                new View.OnClickListener(){
-                    @Override
-                    public void onClick (View view){
-                        //iniciar actividad detalle
-                        getActivity().startActivityForResult(
-                                new Intent(getActivity(),FragmentoDetalle.class),3);
-                    }
-                }
-        );*/
-
         return view;
     }
 
