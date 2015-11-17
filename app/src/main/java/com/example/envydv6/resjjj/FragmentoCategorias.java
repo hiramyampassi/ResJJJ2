@@ -1,5 +1,6 @@
 package com.example.envydv6.resjjj;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
@@ -8,6 +9,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -26,11 +29,21 @@ public class FragmentoCategorias extends Fragment {
     private AppBarLayout appBarLayout;
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    private RecyclerView lista;
+    private RecyclerView.LayoutManager lManager;
 
+    com.melnykov.fab.FloatingActionButton fab;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragmento_paginado, container, false);
+
+        lista = (RecyclerView) view.findViewById(R.id.reciclador);
+        //lista.setHasFixedSize(true);
+
+        // Usar un administrador para LinearLayout
+        lManager = new LinearLayoutManager(getActivity());
+        //lista.setLayoutManager(lManager);
 
         if (savedInstanceState == null) {
             insertarTabs(container);
@@ -41,6 +54,19 @@ public class FragmentoCategorias extends Fragment {
 
             tabLayout.setupWithViewPager(viewPager);
         }
+
+        fab = (com.melnykov.fab.FloatingActionButton) view.findViewById(R.id.fab);
+        fab.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        // Iniciar actividad de inserción
+                        getActivity().startActivityForResult(
+                                new Intent(getActivity(), InsertActivity.class), 3);
+                    }
+                }
+        );
+
 
         return view;
     }

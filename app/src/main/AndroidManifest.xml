@@ -31,6 +31,15 @@
                 android:value=".MainActivity" />
         </activity>
 
+        <activity
+            android:name=".InsertActivity"
+            android:label="insertar_actividad"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.envydv6.resjjj.MainActivity" />
+        </activity>
+
     </application>
 
 </manifest>

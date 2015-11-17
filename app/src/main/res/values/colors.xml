@@ -11,4 +11,18 @@
     <color name="color_light">#ffffff</color>
 
     <color name="background_header_seccion_inicio">#4B4B4B</color>
+
+    <!-- MINI FAB -->
+    <color name="colorNormalMini">#00B0FF</color>
+    <color name="colorPressedMini">#40C4FF</color>
+    <color name="colorRippleMini">#E1F5FE</color>
+
+    <color name="primary">#E49124</color>
+    <color name="accent">#E49124</color>
+    <color name="ripple">#E49124</color>
+    <color name="tertiary">#455561</color>
+    <color name="background">#FFFFFF</color>
+    <color name="textColorPrimary">#323232</color>
+    <color name="textColorSecondary">#434343</color>
+    <color name="transparent_actionbar_background">#24000000</color>
 </resources>

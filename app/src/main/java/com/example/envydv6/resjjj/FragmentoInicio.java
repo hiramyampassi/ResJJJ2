@@ -19,6 +19,7 @@ public class FragmentoInicio extends Fragment {
     public FragmentoInicio() {
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -33,6 +34,7 @@ public class FragmentoInicio extends Fragment {
 
         adaptador = new AdaptadorInicio();
         reciclador.setAdapter(adaptador);
+
         return view;
     }
 

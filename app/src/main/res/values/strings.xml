@@ -36,4 +36,9 @@
     <string name="action_discard">Descartar</string>
     <string name="title_fragmento_detalle">FragmentoDetalle</string>
 
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_activity_r">ActivityRA</string>
+    <string name="location_fetching">Tratando de encontrar su ubicacion</string>
+    <string name="compass_accuracy_low">Por Favor recalibre su brujula moviendo su dispositivo en forma de 8</string>
+
 </resources>
