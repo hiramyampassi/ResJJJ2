@@ -8,6 +8,7 @@ import com.example.envydv6.resjjj.R;
 import com.wikitude.architect.ArchitectView;
 import com.wikitude.architect.StartupConfiguration;
 
+
 public class ActivityRA extends AbstractArchitectCamActivity{
     /**
      * last time the calibration toast was shown, this avoids too many toast shown when compass needs calibration
@@ -20,7 +21,8 @@ public class ActivityRA extends AbstractArchitectCamActivity{
     }*/
     @Override
     public String getARchitectWorldPath() {
-        return "samples/1_Client$Recognition_1_Image$On$Target/index.html";
+        //return "samples/1_Client$Recognition_1_Image$On$Target/index.html";
+        return "samples/1_Client$Recognition_2_Multiple$Targets/index.html";
     }
 
     @Override
@@ -36,6 +38,7 @@ public class ActivityRA extends AbstractArchitectCamActivity{
     @Override
     public int getArchitectViewId() {
         return R.id.architectView;
+        //return R.id.
     }
 
     @Override

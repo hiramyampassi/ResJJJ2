@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.envydv6.resjjj.R;
 import com.wikitude.architect.ArchitectView;
 
 import java.io.File;
@@ -24,32 +25,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.main_ra);
 
         // ensure to clean cache when it is no longer required
         MainActivity.deleteDirectoryContent(ArchitectView.getCacheDirectoryAbsoluteFilePath(this));
 
-        puntoInteres = (Button) findViewById(R.id.btnPuntoInteres);
+        //puntoInteres = (Button) findViewById(R.id.btnPuntoInteres);
         logcat = (TextView) findViewById(R.id.tvLogcat);
 
         //IMAGEN TARJET
         imagenOtro = (Button) findViewById(R.id.btnImagen);
 
-        puntoInteres.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                 Intent i=new Intent(v.getContext(), ActivityRA.class);
-                i.putExtra(EXTRAS_KEY_ACTIVITY_ARCHITECT_WORLD_URL, "samples" + File.separator + "4_Point$Of$Interest_1_Poi$At$Location" + File.separator + "index.html");
-                startActivity(i);
-            }
-        });
-
-        //IMAGEN TARJET
+        //MULTI TARJET
         imagenOtro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), ActivityRA.class);
-                i.putExtra(EXTRAS_KEY_ACTIVITY_ARCHITECT_WORLD_URL, "samples" + File.separator + "1_Client$Recognition_1_Image$On$Target" + File.separator + "index.html");
+                i.putExtra(EXTRAS_KEY_ACTIVITY_ARCHITECT_WORLD_URL, "samples" + File.separator + "1_Client$Recognition_2_Multiple$Targets" + File.separator + "index.html");
                 startActivity(i);
             }
         });

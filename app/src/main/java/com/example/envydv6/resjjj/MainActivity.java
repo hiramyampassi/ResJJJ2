@@ -1,6 +1,5 @@
 package com.example.envydv6.resjjj;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -73,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.item_ra:
                 fragmentoGenerico = new ar();
-                // Iniciar actividad de configuración
+                // Iniciar actividad de RA
                 break;
         }
         if (fragmentoGenerico != null) {

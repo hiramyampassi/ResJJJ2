@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.envydv6.resjjj" >
+    package="com.example.envydv6.resjjj">
 
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Tell the system this app requires OpenGL ES 2.0. -->
+    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+
+    <!-- rear facing cam -->
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+
+    <!-- users location -->
+    <uses-feature android:name="android.hardware.location" android:required="true" />
+
+    <!-- accelerometer -->
+    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true" />
+
+    <!-- compass -->
+    <uses-feature android:name="android.hardware.sensor.compass" android:required="true" />
+
+    <!-- do not support small resolution screens -->
+    <supports-screens
+        android:smallScreens="false" android:largeScreens="true"
+        android:normalScreens="true" android:anyDensity="true"
+        android:xlargeScreens="true" />
 
     <application
         android:allowBackup="true"
@@ -38,6 +66,12 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.envydv6.resjjj.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".resra.ActivityRA"
+            android:label="@string/title_activity_activity_r"
+            android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
 
     </application>

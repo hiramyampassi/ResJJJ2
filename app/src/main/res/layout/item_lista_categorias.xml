@@ -35,18 +35,5 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Subhead.Inverse"
             android:textSize="12sp" />
 
-        <com.melnykov.fab.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="bottom|right"
-            android:layout_margin="0dp"
-            android:src="@mipmap/ic_add"
-            fab:fab_colorNormal="@color/accent"
-            fab:fab_colorPressed="@color/primary"
-            fab:fab_colorRipple="@color/ripple" />
-
     </LinearLayout>
 </LinearLayout>
